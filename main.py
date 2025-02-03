@@ -6,6 +6,29 @@ def main():
     st.title("Student Information Form")
     st.write("Please fill out the form below:")
     
+    # JavaScript to move to next input field on Enter key press
+    st.markdown(
+        """
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let inputs = document.querySelectorAll('input');
+            inputs.forEach((input, index) => {
+                input.addEventListener('keydown', function(event) {
+                    if (event.key === 'Enter') {
+                        event.preventDefault();
+                        let nextInput = inputs[index + 1];
+                        if (nextInput) {
+                            nextInput.focus();
+                        }
+                    }
+                });
+            });
+        });
+        </script>
+        """,
+        unsafe_allow_html=True
+    )
+    
     if "student_data" not in st.session_state:
         st.session_state.student_data = []
     
