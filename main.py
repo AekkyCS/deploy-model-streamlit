@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import datetime
 
 def main():
     st.title("Student Information Form")
@@ -12,7 +13,7 @@ def main():
         student_id = st.text_input("Student ID:")
         first_name = st.text_input("First Name:")
         last_name = st.text_input("Last Name:")
-        birth_date = st.date_input("Date of Birth:")
+        birth_date = st.date_input("Date of Birth:", min_value=datetime.date(1950, 1, 1), max_value=datetime.date(2025, 12, 31))
         phone_number = st.text_input("Phone Number:")
         
         submitted = st.form_submit_button("Submit")
