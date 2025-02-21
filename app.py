@@ -27,7 +27,7 @@ unsafe_allow_html=True
 )
 
 st.markdown(
-'<div class="Profile.jpg"></div>',
+'<div class="centered-image"><img src="Profile.jpg"></div>',
 unsafe_allow_html=True
 )
 st.title("Sleep Disorder Prediction")
