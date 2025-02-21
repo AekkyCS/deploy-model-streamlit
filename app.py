@@ -5,6 +5,12 @@ import pickle
 
 with open("mymodelLR.pkl", "rb") as file:
     mymodelLR = pickle.load(file)
+import os
+if os.path.exists("Profile.jpg"):
+    st.success("✅ พบไฟล์ Profile.jpg แล้ว!")
+else:
+    st.error("❌ ไม่พบไฟล์ Profile.jpg กรุณาตรวจสอบชื่อไฟล์หรือพาธ")
+
 st.markdown(
 """
 <style>
