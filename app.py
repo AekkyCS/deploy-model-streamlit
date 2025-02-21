@@ -5,7 +5,11 @@ import pickle
 
 with open("mymodelLR.pkl", "rb") as file:
     mymodelLR = pickle.load(file)
-col1, col2, col3 = st.columns([1, 2, 1])
+if st.session_state.get("is_mobile", False):
+    col1, col2, col3 = st.columns([1, 3, 1])  
+else:
+    col1, col2, col3 = st.columns([1, 2, 1]) 
+
 with col2:
     st.image("https://scontent.fvte2-3.fna.fbcdn.net/v/t39.30808-6/435520429_797008769143102_7596088011195635003_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=xeGS1PrQFE8Q7kNvgFDJghb&_nc_oc=Adi-_3fCU674XQgrQCpVHpCpjgJ-2clYbgIMY4l4GLI9CfjYNBdP9xfIoeMR9-bP6P4&_nc_zt=23&_nc_ht=scontent.fvte2-3.fna&_nc_gid=Avriz7GJ6f8MwvB04s5_dsO&oh=00_AYDiNBW8FzU80Dah_ANU3rFd3CiXQAr0taWJUwjFute60A&oe=67BE3B65", caption="Mr.Aekoudone Thebvongsa", width=300)
 st.title("Sleep Disorder Prediction")
