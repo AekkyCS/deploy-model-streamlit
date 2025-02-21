@@ -20,9 +20,10 @@ with col2:
 
 st.markdown("""
     <div style="text-align: center; font-size: 14px;">
-    ข้อความของคุณ
+        I am studying Computer Science, and this is my first project.
     </div>
 """, unsafe_allow_html=True)
+
 st.title("Sleep Disorder Prediction")
 st.write("Fill in information to predict the type of sleep problem")
 
