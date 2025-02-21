@@ -16,7 +16,7 @@ else:
     col1, col2, col3 = st.columns([1, 2, 1])  # ขนาดปกติ
 
 with col2:
-    st.image(image_path,caption = "Mr.Aekoudone Thebvongsa" ,width=300)
+    st.image(image_path,caption = "Mr.Aekoudone Thebvongsa" ,width=300,unsafe_allow_html=True)
 
 st.markdown("""
     <div style="text-align: center; font-size: 14px;">
