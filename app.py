@@ -12,7 +12,7 @@ image_path = "Profile.jpg"
 if st.session_state.get("is_mobile", False):
     col1, col2, col3 = st.columns([1, 3, 1])
 else:
-    col1, col2, col3 = st.columns([1, 1.4, 1])  
+    col1, col2, col3 = st.columns([1, 1.3, 1])  
 
 with col2:
     st.image(image_path,caption = "Mr.Aekoudone Thebvongsa" ,width=300)
