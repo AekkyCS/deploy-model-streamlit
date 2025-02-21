@@ -9,14 +9,13 @@ with open("mymodelLR.pkl", "rb") as file:
 
 image_path = "Profile.jpg"
 
-# ตรวจสอบขนาดหน้าจอของ Streamlit
 if st.session_state.get("is_mobile", False):
-    col1, col2, col3 = st.columns([1, 3, 1])  # ปรับให้ตรงกลางใหญ่ขึ้น
+    col1, col2, col3 = st.columns([1, 3, 2])
 else:
-    col1, col2, col3 = st.columns([1, 2, 1])  # ขนาดปกติ
+    col1, col2, col3 = st.columns([1, 2, 1])  
 
 with col2:
-    st.image(image_path,caption = "Mr.Aekoudone Thebvongsa" ,width=300,unsafe_allow_html=True)
+    st.image(image_path,caption = "Mr.Aekoudone Thebvongsa" ,width=300)
 
 st.markdown("""
     <div style="text-align: center; font-size: 14px;">
