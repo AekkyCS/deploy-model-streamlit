@@ -7,30 +7,16 @@ with open("mymodelLR.pkl", "rb") as file:
     mymodelLR = pickle.load(file)
 
 
-st.write("✅ โหลด CSS สำเร็จ")
+image_path = "Profile.jpg"
 
-st.markdown(
-    """
-    <style>
-    .centered-image {
-        display: flex;
-        justify-content: center;
-    }
-    .centered-image img {
-        max-width: 80%;
-        height: auto;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+# ตรวจสอบขนาดหน้าจอของ Streamlit
+if st.session_state.get("is_mobile", False):
+    col1, col2, col3 = st.columns([1, 3, 1])  # ปรับให้ตรงกลางใหญ่ขึ้น
+else:
+    col1, col2, col3 = st.columns([1, 2, 1])  # ขนาดปกติ
 
-st.write("✅ โหลด HTML สำเร็จ")
-
-st.markdown(
-'<div class="centered-image"><img src="Profile.jpg"></div>',
-unsafe_allow_html=True
-)
+with col2:
+    st.image(image_path, width=300)
 st.title("Sleep Disorder Prediction")
 st.write("Fill in information to predict the type of sleep problem")
 
