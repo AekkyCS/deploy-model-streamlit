@@ -10,7 +10,7 @@ with open("mymodelLR.pkl", "rb") as file:
 image_path = "Profile.jpg"
 
 if st.session_state.get("is_mobile", False):
-    col1, col2, col3 = st.columns([1, 3, 2])
+    col1, col2, col3 = st.columns([1, 3, 3])
 else:
     col1, col2, col3 = st.columns([1, 2, 1])  
 
