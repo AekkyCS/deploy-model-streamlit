@@ -19,7 +19,7 @@ with col2:
     st.image(image_path,caption = "Mr.Aekoudone Thebvongsa" ,width=300)
 
 st.markdown("""
-    <div style="text-align: center; font-size: 10px;">
+    <div style="text-align: center; font-size: 5px;">
         <h1>ข้อความของคุณ</h1>
     </div>
 """, unsafe_allow_html=True)
