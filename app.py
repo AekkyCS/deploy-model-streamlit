@@ -5,32 +5,27 @@ import pickle
 
 with open("mymodelLR.pkl", "rb") as file:
     mymodelLR = pickle.load(file)
-import os
-if os.path.exists("Profile.jpg"):
-    st.success("✅ พบไฟล์ Profile.jpg แล้ว!")
-else:
-    st.error("❌ ไม่พบไฟล์ Profile.jpg กรุณาตรวจสอบชื่อไฟล์หรือพาธ")
+
+
+st.write("✅ โหลด CSS สำเร็จ")
 
 st.markdown(
-"""
-<style>
-.centered-image {
-    display: flex;
-    justify-content: center;
-}
-.centered-image img {
-    max-width: 80%; /* ปรับให้เล็กลงบนมือถือ */
-    height: auto;
-}
-@media (max-width: 768px) {
-    .centered-image img {
-        max-width: 90%; /* ปรับขนาดเมื่ออยู่บนมือถือ */
+    """
+    <style>
+    .centered-image {
+        display: flex;
+        justify-content: center;
     }
-}
-</style>
-""",
-unsafe_allow_html=True
+    .centered-image img {
+        max-width: 80%;
+        height: auto;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
 )
+
+st.write("✅ โหลด HTML สำเร็จ")
 
 st.markdown(
 '<div class="centered-image"><img src="Profile.jpg"></div>',
