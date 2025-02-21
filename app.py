@@ -20,7 +20,7 @@ with col2:
 
 st.markdown("""
     <div style="text-align: center; font-size: 14px;">
-        ข้อความของคุณ
+    ข้อความของคุณ
     </div>
 """, unsafe_allow_html=True)
 st.title("Sleep Disorder Prediction")
