@@ -17,6 +17,12 @@ else:
 
 with col2:
     st.image(image_path,caption = "Mr.Aekoudone Thebvongsa" ,width=300)
+
+st.markdown("""
+    <div style="text-align: center;">
+        <h1>ข้อความของคุณ</h1>
+    </div>
+""", unsafe_allow_html=True)
 st.title("Sleep Disorder Prediction")
 st.write("Fill in information to predict the type of sleep problem")
 
